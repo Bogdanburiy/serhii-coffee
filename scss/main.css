@@ -386,7 +386,7 @@ p {
   max-height: auto;
 }
 .services-accordion__card.active .services-accordion__card-head .icon {
-  transform: rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
 }
 .services a.fill-btn {
   width: 100%;
@@ -772,8 +772,11 @@ p {
   }
 }
 @media only screen and (max-width: 992px) {
+  .section-title {
+    font-size: 34px;
+  }
   .intro {
-    padding: 50px 0;
+    padding: 134px 0 50px 0;
   }
   .intro-heading small {
     font-size: 14px;
@@ -799,6 +802,18 @@ p {
   .intro-carousel__card p {
     font-size: 14px;
   }
+  .instruction-buy .section-title br {
+    display: none;
+  }
+  .instruction-buy {
+    padding-left: 30px;
+  }
+  .footer-row {
+    flex-direction: column;
+  }
+  .footer-social {
+    margin: 30px 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   .header {
@@ -816,6 +831,113 @@ p {
   }
   .intro {
     padding: 117px 0 50px 0;
+  }
+  .intro-heading h1 {
+    font-size: 40px;
+  }
+  .intro-heading p {
+    width: 480px;
+  }
+  .services-accordion__card-head .strong {
+    margin-left: 50px;
+  }
+  .services-accordion__card-body {
+    padding-left: 70px;
+  }
+  .instruction-row {
+    flex-direction: column;
+  }
+  .instruction-book {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .instruction-book__anim {
+    width: 100%;
+  }
+  .instruction-buy {
+    width: 100%;
+    padding-left: 0;
+  }
+  .consultation-row {
+    flex-direction: column;
+  }
+  .consultation-heading {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .consultation-form {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .intro-heading h1 {
+    font-size: 36px;
+  }
+  .intro-heading {
+    position: relative;
+    z-index: 1;
+  }
+  .intro::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
+  }
+  .services {
+    padding: 50px 0;
+  }
+  .services-accordion__card-head {
+    padding: 20px 0;
+  }
+  .services-accordion__card-head .counter,
+  .services-accordion__card-head .strong {
+    font-size: 18px;
+  }
+  .services-accordion__card-body p {
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .study {
+    padding: 50px 0;
+  }
+  .study-list__card p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .study-additional {
+    margin: 30px 0;
+  }
+  .study-additional__card .strong {
+    font-size: 24px;
+  }
+  .study-additional__card p {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .instruction {
+    padding: 50px 0;
+  }
+  .consultation {
+    padding: 50px 0;
+  }
+  .footer-social ul li {
+    font-size: 14px;
+  }
+  .footer-social ul li i.icon img {
+    width: 16px;
+  }
+  .footer-copyright a {
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -835,23 +957,6 @@ p {
   }
   .intro {
     padding: 87px 0 30px 0;
-  }
-  .intro::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-backdrop-filter: blur(40px);
-            backdrop-filter: blur(40px);
-  }
-  .intro-heading {
-    position: relative;
-    z-index: 1;
   }
   .intro-heading small {
     font-size: 14px;
@@ -886,6 +991,13 @@ p {
   }
   .services-accordion__card-head .icon img {
     width: 10px;
+  }
+  .services-accordion__card-body {
+    padding-left: 30px;
+  }
+  .services-accordion__card-body p {
+    font-size: 14px;
+    line-height: 20px;
   }
   .services a.fill-btn {
     margin-top: 30px;
